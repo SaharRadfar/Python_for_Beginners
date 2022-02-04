@@ -1,6 +1,6 @@
 import random
 
-def guess(x):
+def user_guess(x):
     random_number = random.randrange (1, x+1)
     print(f"The number I choose is between 1 and {x}. ")
     print("Can you guess what number it is? Let's try ")
@@ -11,7 +11,7 @@ def guess(x):
         if guess_number > random_number:
             print("make another guess, this time choose a smaller number ")
             
-        elif guess_number < random_number::
+        elif guess_number < random_number:
             print("make another guess, this time choose a bigger number ")
 
 
@@ -21,6 +21,7 @@ def guess(x):
 
 def comp_guess(x):
     print(f"Select a number between 1 and {x} and let's see if I can guess it")
+    useless_parameter = input("Are you ready? ")
     low , high = 1 , x
     feedback = " "
 
@@ -40,6 +41,12 @@ def comp_guess(x):
             print (f"Hurrayyyyyyyy, I did it!, correct number is {guess_number}")    
 
 
-x = int(input("Enter a number: "))
-guess(x)
-comp_guess(x)
+x = int(input("Enter a number greater than 5: "))
+who = ""
+
+while who != "y" and who != "c":
+    who = input("Who will Guess the number? you(M) or computer(C) ").lower()
+    if who == "y":
+        user_guess(x)
+    elif who == "c": 
+        comp_guess(x)
