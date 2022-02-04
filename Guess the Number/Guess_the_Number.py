@@ -11,7 +11,7 @@ def guess(x):
         if guess_number > random_number:
             print("make another guess, this time choose a smaller number ")
             
-        else:
+        elif guess_number < random_number::
             print("make another guess, this time choose a bigger number ")
 
 
