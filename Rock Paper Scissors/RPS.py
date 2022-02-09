@@ -12,16 +12,23 @@ def abreviation(argument):
     elif argument == "p":
         return "Paper"
     
-def rps_game():
+def rps_game(user):
     computer = random.choice(["r" , "p" , "s"])
-    user = input("Choose Rock(R), Paper(P) or Scissor(S) ").lower()
 
     if computer == user:
         return f"Tie, we both choose {abreviation(user)}"
     
     if winer(computer , user):
-            return f"Hurray, I won. I choose {abreviation(computer)} and you choose {abreviation(user)}"
+            return f"Hurray, I win. I choose {abreviation(computer)} and you choose {abreviation(user)}"
     
     return (f"Oops, I lost. I choose {abreviation(computer)} and you choose {abreviation(user)}")
 
-print(rps_game())
+
+user = input("Choose Rock(R), Paper(P) or Scissor(S) ").lower()
+user_input = ["r" , "s" , "p"]
+
+while user not in user_input:
+    print("Wrong input, try again")
+    user = input("Choose Rock(R), Paper(P) or Scissor(S) ").lower()
+    
+print(rps_game(user))
