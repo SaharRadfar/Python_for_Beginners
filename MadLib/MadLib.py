@@ -52,6 +52,68 @@ def story_teller(a):
         print ("=======================================================================================================")
         return story
 
-a = random.randint(1, 2)
+    elif a == 3:
+        boy1 = input("Give me a boy's name: ")
+        boy2 = input("Type another boy's name: ")
+        girl1 = input("Now give a girl's name: ")
+        girl2 = input("Type another girl's name: ")
+        animal = input("almost there, this time type an animal name: ")
+        exclamation = input("Last one is an exclamation:: ")
+
+        story = "Once upon a time, two people,  " + girl1 +" and "+ boy1 + " were walking " \
+        "in the park. They were talking about his " + animal + \
+        ' . Then 1 exclaimed, "' + exclamation + '!", "What is it, ' + boy1 + \
+        '" cried " '+ girl1 + \
+        '" I just remembered something, I have this ring in my pocket."' \
+        "said " + boy1 + '. "Why would you have that?" asked  ' + girl1 + \
+        '. "Will you marry me?"  ' + boy1 + 'asked. ' \
+        + girl1 + ' replied, "Ummmmmmm... Yes, I Love You, ' + boy1 + '!" So they left on ' \
+        + "1's 50 to their kingdom and had 2 children named " + girl2 + 'and' + boy2 + \
+        'and they lived happily ever after as every story should end!'
+
+        print (" ")
+        print ("=======================================================================================================")
+        return story
+
+    elif a == 4:
+        boy = input("Give me a boy's name: ")
+        number = input("Input a number: ")
+        thing1 = input("Type name of a thing: ")
+        thing2 = input("Good, now give me another thing: ")
+        thing3 = input("Last one is one more thing: ")
+
+        story = "One day a boy named " + boy + " entered the Children's Lottery hoping to win $" \
+        + number + " . He wasn't expecting to win when one day a lady rang telling him " \
+        "that he had won.  " + boy + \
+        " was very excited and decided to donate to a charity and buy a " \
+        + thing1 + ". He also bought a " + thing2 + \
+        "and a " + thing3 + " and he was very happy from then on."
+        
+        print (" ")
+        print ("=======================================================================================================")
+        return story
+
+    elif a == 5:
+        girl = input("Give me a girl's name: ")
+        radiostation = input("Input a radio station name: ")
+        place = input("Type name of a place: ")
+        star = input("Good, now give me name of a famous pop star: ")
+        number = input("Last one is a number: ")
+
+        story = "Once " + girl + " was listening to "+ radiostation + \
+        " when she heard that " + star + "would be coming to the " + place + \
+        " but she didn't have any money to go and see " + star + ". So " + girl + \
+        " asked her mom for ideas on how to make some money. Her mom suggested that she should wash" \
+        "people's cars and have a garage sale to get rid of some of her old toys." + girl + \
+        " did these things and she managed to raise £"  + number + " and got to go and see " + star + \
+        " in the end."
+
+
+        print (" ")
+        print ("=======================================================================================================")
+        return story
+
+
+a = random.randint(1, 6)
 print(story_teller(a))
 print ("=======================================================================================================")
