@@ -38,7 +38,7 @@ def comp_guess(x):
     feedback = " "
     print(f"Select a number between 1 and {x} and let's see if I can guess it")
     print(f"I'll guess {y} times, Let's start")  
-    useless_parameter = input("Are you ready? ")
+    useless_parameter = input("Are you ready? yes(Y) ")
 
     for i in range ( 1 , y+1 ):
         if low == high:
@@ -46,7 +46,7 @@ def comp_guess(x):
         else:
             guess_number = random.randint( low , high )
         
-        feedback = input(f"guess no.{i}: is {guess_number} correct number(Y), high(H) or low(L) ").lower()
+        feedback = input(f"guess no.{i}: is {guess_number} correct number(Y), high(H) or low(L)? ").lower()
         if feedback == "h":
             high = guess_number - 1
         elif feedback == "l":
